@@ -1,0 +1,431 @@
+  /*════════════════════════════════════════════
+    Favourites (Both Sidebar and Tab)
+  ════════════════════════════════════════════*/
+/*--- (This is long and VERY highly styled for my own profile. You're welcome to copy snippets, but you'll likely need to tinker around with stuff to get it working for yourself.) ---*/
+
+/*--- Favourites Grid Layout (Studios excluded) ---*/
+.favourites.preview .favourites-wrap:not(.favourites.preview .favourites-wrap.studios) {
+    position: relative;
+    display: grid !important;
+    grid-gap: 12px !important;
+    column-gap: 12px !important;
+    grid-template-columns: repeat(4, 85px) !important;
+    grid-template-rows: unset !important;  
+    grid-auto-rows: minmax(120px, auto) !important; 
+    padding: 0 !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    margin-bottom: 40px !important;
+    background: var(--foreground) !important;
+    justify-content: center !important;
+    width: 408px !important;
+}
+.favourites.preview .favourites-wrap a.favourite:not(.favourites.preview .favourites-wrap.studios a.favourite) {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    min-height: 60px;
+}
+
+/*--- Global Favourite Hover Transitions (with backup box-shadow that takes --color-blue) ---*/
+.favourites a.favourite {
+    filter: var(--cover-saturation);
+    transition: all var(--master-transition-timer) ease-in-out;
+    background-size: 100% !important;
+    background-color: transparent !important;
+}
+
+.favourites a.favourite:hover {
+    box-shadow: var(--box-shadow) color-mix(in srgb,rgb(var(--color-blue)) var(--box-shadow-mix), white);
+    background-size: var(--background-zoom) !important;
+    filter: var(--cover-saturation-hover);
+}
+
+.favourites.preview a.favourite {
+    height: unset !important;
+}
+/*--- Hide Favs Until Hover Grid Styling ---*/
+
+@keyframes arrowfloat {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(var(--arrow-float));
+    }
+}
+
+@keyframes enablePointerEvents {
+    to { pointer-events: auto; }
+}
+
+/*════════ Anime Grid ════════*/
+.overview div.favourites:nth-child(4) > h2:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    top: 364px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-image: url("https://i.imgur.com/TfoigpS.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    visibility: visible;
+    z-index: 5;
+    animation: arrowfloat 1.8s linear infinite;
+    animation-delay: 0s !important;
+    opacity: 1;
+    transition: opacity var(--anime-grid-timer) ease-in-out;
+}
+
+body:has(.favourites.preview .favourites-wrap.anime:hover) .overview div.favourites:nth-child(4) > h2:nth-child(1)::before {
+    opacity: 0;
+}
+
+.favourites.preview .favourites-wrap.anime {
+    max-height: 367px;
+    overflow: hidden;
+    transition: max-height var(--anime-grid-timer) ease-in-out, border var(--anime-grid-timer) ease-in-out, box-shadow var(--anime-grid-timer) ease-in-out;
+    transition-delay: overflow calc(--anime-grid-timer - 0.05s);
+    border: var(--border) solid rgb(var(--color-blue));
+}
+.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+3) {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--anime-grid-timer) ease-in-out, transform var(--anime-grid-timer) ease-in-out;
+    pointer-events: none;
+}
+.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+5) {
+    transform: translateY(40px);
+}
+.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+9) {
+    transform: translateY(60px);
+}
+.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+13) {
+    transform: translateY(80px);
+}
+.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+17) {
+    transform: translateY(100px);
+}
+.favourites.preview .favourites-wrap.anime:hover {
+    max-height: 1010px !important;
+}
+.favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+3) {
+    opacity: 1;
+    transform: translateY(0);
+    filter: var(--cover-saturation);
+    background-size: 100% !important;
+    transition: opacity var(--anime-grid-timer) ease-in-out, transform var(--anime-grid-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out, background-size var(--master-transition-timer) ease-in-out;
+    animation: enablePointerEvents 0s calc(var(--anime-grid-timer) - 0.075s) forwards;
+}
+.favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+5):nth-child(-n+8) {
+    transition: opacity var(--anime-grid-timer) ease-in-out 0.01s, transform var(--anime-grid-timer) ease-in-out 0.01s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
+}
+.favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+9):nth-child(-n+12) {
+    transition: opacity var(--anime-grid-timer) ease-in-out 0.05s, transform var(--anime-grid-timer) ease-in-out 0.05s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
+}
+.favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+13):nth-child(-n+16) {
+    transition: opacity var(--anime-grid-timer) ease-in-out 0.1s, transform var(--anime-grid-timer) ease-in-out 0.1s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
+}
+.favourites.preview .favourites-wrap.anime:hover .favourite.media:nth-child(n+17):nth-child(-n+20) {
+    transition: opacity var(--anime-grid-timer) ease-in-out 0.15s, transform var(--anime-grid-timer) ease-in-out 0.15s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
+}
+.favourites.preview .favourites-wrap.anime .favourite.media:nth-child(n+3):hover {
+    background-size: var(--background-zoom) !important;
+    filter: var(--cover-saturation-hover);
+    transition: background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
+}
+
+/*════════ Manga Grid ════════*/
+.overview div.favourites:nth-child(5) > h2:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    top: 364px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-image: url("https://i.imgur.com/TfoigpS.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    visibility: visible;
+    z-index: 5;
+    animation: arrowfloat 1.8s linear infinite;
+    animation-delay: 0s !important;
+    opacity: 1;
+    transition: opacity var(--manga-grid-timer) ease-in-out;
+}
+
+body:has(.favourites.preview .favourites-wrap.manga:hover) .overview div.favourites:nth-child(5) > h2:nth-child(1)::before {
+    opacity: 0;
+}
+
+.favourites.preview .favourites-wrap.manga {
+    max-height: 367px;
+    overflow: hidden;
+    transition: max-height var(--manga-grid-timer) ease-in-out, border var(--manga-grid-timer) ease-in-out, box-shadow var(--manga-grid-timer) ease-in-out;
+    border: var(--border) solid rgb(var(--color-blue));
+}
+.favourites.preview .favourites-wrap.manga .favourite.media:nth-child(n+3) {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--manga-grid-timer) ease-in-out, transform var(--manga-grid-timer) ease-in-out;
+    pointer-events: none;
+}
+.favourites.preview .favourites-wrap.manga .favourite.media:nth-child(n+7) {
+    transform: translateY(40px);
+}
+.favourites.preview .favourites-wrap.manga:hover {
+    max-height: 630px !important;
+}
+.favourites.preview .favourites-wrap.manga:hover .favourite.media:nth-child(n+3) {
+    opacity: 1;
+    transform: translateY(0);
+    filter: var(--cover-saturation);
+    background-size: 100% !important;
+    transition: opacity var(--manga-grid-timer) ease-in-out, transform var(--manga-grid-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out, background-size var(--master-transition-timer) ease-in-out;
+    animation: enablePointerEvents 0s calc(var(--manga-grid-timer) - 0.075s) forwards;
+}
+.favourites.preview .favourites-wrap.manga:hover .favourite.media:nth-child(n+3):nth-child(-n+6) {
+    transition: opacity var(--anime-grid-timer) ease-in-out 0.01s, transform var(--anime-grid-timer) ease-in-out 0.01s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
+}
+.favourites.preview .favourites-wrap.manga:hover .favourite.media:nth-child(n+7) {
+    transition: opacity var(--anime-grid-timer) ease-in-out 0.05s, transform var(--anime-grid-timer) ease-in-out 0.05s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
+}
+.favourites.preview .favourites-wrap.manga .favourite.media:nth-child(n+3):hover {
+    background-size: var(--background-zoom) !important;
+    filter: var(--cover-saturation-hover);
+    transition: background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
+}
+
+/*════════ Characters Grid ════════*/
+.overview div.favourites:nth-child(6) > h2:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    top: 302px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-image: url("https://i.imgur.com/TfoigpS.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    visibility: visible;
+    z-index: 5;
+    animation: arrowfloat 1.8s linear infinite;
+    animation-delay: 0s !important;
+    opacity: 1;
+    transition: opacity var(--characters-grid-timer) ease-in-out;
+}
+
+body:has(.favourites.preview .favourites-wrap.characters:hover) .overview div.favourites:nth-child(6) > h2:nth-child(1)::before {
+    opacity: 0;
+}
+
+.favourites.preview .favourites-wrap.characters {
+    max-height: 305px;
+    overflow: hidden;
+    transition: max-height var(--characters-grid-timer) ease-in-out, border var(--characters-grid-timer) ease-in-out, box-shadow var(--characters-grid-timer) ease-in-out;
+    border: var(--border) solid rgb(var(--color-blue));
+}
+.favourites.preview .favourites-wrap.characters .favourite.character:nth-child(n+9) {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--characters-grid-timer) ease-in-out, transform var(--characters-grid-timer) ease-in-out;
+    pointer-events: none;
+}
+.favourites.preview .favourites-wrap.characters .favourite.character:nth-child(n+13) {
+    transform: translateY(40px);
+}
+.favourites.preview .favourites-wrap.characters .favourite.character:nth-child(n+17) {
+    transform: translateY(60px);
+}
+.favourites.preview .favourites-wrap.characters:hover {
+    max-height: 680px !important;
+}
+.favourites.preview .favourites-wrap.characters:hover .favourite.character:nth-child(n+9) {
+    opacity: 1;
+    transform: translateY(0);
+    filter: var(--cover-saturation);
+    background-size: 100% !important;
+    transition: opacity var(--characters-grid-timer) ease-in-out, transform var(--characters-grid-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out, background-size var(--master-transition-timer) ease-in-out;
+    animation: enablePointerEvents 0s calc(var(--characters-grid-timer) - 0.075s) forwards;
+}
+.favourites.preview .favourites-wrap.characters:hover .favourite.character:nth-child(n+13):nth-child(-n+16) {
+    transition: opacity var(--anime-grid-timer) ease-in-out 0.05s, transform var(--anime-grid-timer) ease-in-out 0.05s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
+}
+.favourites.preview .favourites-wrap.characters:hover .favourite.character:nth-child(n+17) {
+    transition: opacity var(--anime-grid-timer) ease-in-out 0.1s, transform var(--anime-grid-timer) ease-in-out 0.1s, filter var(--master-transition-timer) ease-in-out 0s, box-shadow var(--master-transition-timer) ease-in-out 0s, background-size var(--master-transition-timer) ease-in-out 0s;
+}
+.favourites.preview .favourites-wrap.characters .favourite.character:nth-child(n+9):hover {
+    background-size: var(--background-zoom) !important;
+    filter: var(--cover-saturation-hover);
+    transition: background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
+}
+
+/*════════ Staff Grid ════════*/
+.overview div.favourites:nth-child(7) > h2:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    top: 302px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-image: url("https://i.imgur.com/TfoigpS.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    visibility: visible;
+    z-index: 5;
+    animation: arrowfloat 1.8s linear infinite;
+    animation-delay: 0s !important;
+    opacity: 1;
+    transition: opacity var(--staff-grid-timer) ease-in-out;
+}
+
+body:has(.favourites.preview .favourites-wrap.staff:hover) .overview div.favourites:nth-child(7) > h2:nth-child(1)::before {
+    opacity: 0;
+}
+
+.favourites.preview .favourites-wrap.staff {
+    max-height: 305px;
+    overflow: hidden;
+    transition: max-height var(--staff-grid-timer) ease-in-out, border var(--staff-grid-timer) ease-in-out, box-shadow var(--staff-grid-timer) ease-in-out;
+    border: var(--border) solid rgb(var(--color-blue));
+}
+.favourites.preview .favourites-wrap.staff .favourite.staff:nth-child(n+9) {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--staff-grid-timer) ease-in-out, transform var(--staff-grid-timer) ease-in-out;
+    pointer-events: none;
+}
+.favourites.preview .favourites-wrap.staff:hover {
+    max-height: 420px !important;
+}
+.favourites.preview .favourites-wrap.staff:hover .favourite.staff:nth-child(n+9) {
+    opacity: 1;
+    transform: translateY(0);
+    filter: var(--cover-saturation);
+    background-size: 100% !important;
+    transition: opacity var(--staff-grid-timer) ease-in-out, transform var(--staff-grid-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out, background-size var(--master-transition-timer) ease-in-out;
+    animation: enablePointerEvents 0s calc(var(--staff-grid-timer) - 0.075s) forwards;
+}
+.favourites.preview .favourites-wrap.staff .favourite.staff:nth-child(n+9):hover {
+    background-size: var(--background-zoom) !important;
+    filter: var(--cover-saturation-hover);
+    transition: background-size var(--master-transition-timer) ease-in-out, filter var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
+}
+
+.favourites.preview .favourites-wrap.staff .favourite.staff:nth-child(n+13) {
+    visibility: hidden;
+}
+
+/*--- Favourites Studio Styling (Wrap, Grid) ---*/
+.favourites.preview .favourites-wrap.studios {
+    background: var(--foreground) !important;
+    margin-top: -5px;
+    border: var(--border) solid rgb(var(--color-blue));
+    transition: border var(--master-transition-timer) ease-in-out, box-shadow var(--master-transition-timer) ease-in-out;
+}
+.overview .favourite.studio {
+    min-height: 150px;
+    font-size: 1.8rem;
+    display: grid;
+    grid-gap: 10px;
+    padding: 2px !important;
+    text-align: center;
+    align-content: center;
+    position: relative;
+    color: transparent;
+    margin-bottom: 12px !important;
+    box-shadow: none !important;
+}
+
+/*--- General Studio + Hover Styling ---*/
+.favourites a.favourite.studio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    z-index: -1;
+    transition: filter var(--master-transition-timer) ease-in-out, transform var(--master-transition-timer) ease-in-out;
+    transform: scale(1);
+    border-radius: var(--border-radius) !important;
+}
+
+.favourites a.favourite.studio::after {
+    content: "" !important; 
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    transition: box-shadow var(--master-transition-timer) ease-in-out !important;
+    border-radius: var(--border-radius) !important;
+}
+
+/*--- Stuff to Specifically Fix Automail 5-Width Fuckery For Studios ---*/
+.overview .favourites > .favourites-wrap.studios {
+    column-gap: 25px !important;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    height: 355px !important;
+    row-gap: 48px !important;
+    width: 408px !important;
+    padding: 15px !important;
+    padding-top: 20px !important;
+} 
+.overview .favourite.studio {
+    width: 376px !important;
+}
+.overview .favourite.studio::after, .favourites .favourite.studio::after {
+    all: unset !important;
+}
+/*--- Section Headers for Favourites ---*/
+.overview div.favourites:nth-child(4) > h2:nth-child(1) {
+    position: relative;
+    visibility: hidden;
+}
+.overview div.favourites:nth-child(5) > h2:nth-child(1) {
+    position: relative;
+    visibility: hidden;
+}
+.overview div.favourites:nth-child(6) > h2:nth-child(1) {
+    position: relative;
+    visibility: hidden;
+}
+.overview div.favourites:nth-child(6) > h2:nth-child(1)::after {
+    top: 11px;
+    right: 96px;
+}
+.overview div.favourites:nth-child(7) > h2:nth-child(1) {
+    position: relative;
+    visibility: hidden;
+}
+.overview div.favourites:nth-child(7) > h2:nth-child(1)::after {
+    top: 11px;
+    right: 116px;
+}
+.overview div.favourites:nth-child(8) > h2:nth-child(1) {
+    position: relative;
+    visibility: hidden;
+}
+.overview div.favourites:nth-child(8) > h2:nth-child(1)::after {
+    top: 11px;
+    right: 149px;
+}
+/*--- Fix Margins for Titles/Wraps ---*/
+.overview div.favourites h2:not(.favourites:nth-child(4) > h2:nth-child(1)) {
+    margin-top: -25px;
+}
