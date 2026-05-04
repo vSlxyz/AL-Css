@@ -1,0 +1,71 @@
+@keyframes ten {
+  0% {
+    text-shadow:
+      0 0 2px rgba(228, 161, 255, 0.1),
+      0 0 4px rgba(228, 161, 255, 0.05);
+  }
+  100% {
+    text-shadow:
+      0 0 6px rgba(245, 190, 255, 0.9),
+      0 0 12px rgba(228, 161, 255, 1),
+      0 0 20px rgba(198, 131, 225, 0.85);
+  }
+}
+
+@keyframes ninepointfive {
+  0% {
+    text-shadow:
+      0 0 2px rgba(179, 220, 255, 0.1),
+      0 0 4px rgba(179, 220, 255, 0.05);
+  }
+  100% {
+    text-shadow:
+      0 0 6px rgba(205, 240, 255, 0.9),
+      0 0 12px rgba(179, 220, 255, 1),
+      0 0 20px rgba(149, 190, 225, 0.85);
+  }
+}
+
+@keyframes nine {
+  0% {
+    text-shadow:
+      0 0 2px rgba(185, 255, 179, 0.1),
+      0 0 4px rgba(185, 255, 179, 0.05);
+  }
+  100% {
+    text-shadow:
+      0 0 6px rgba(215, 255, 205, 0.9),
+      0 0 12px rgba(185, 255, 179, 1),
+      0 0 20px rgba(155, 225, 149, 0.85);
+  }
+}
+
+.list-entries .score[score="10"] {
+    animation: ten var(--glow-length) infinite alternate;
+    animation-delay: 0s !important;
+}
+
+.list-entries .entry.row:has(.score[score="10"]) .title > a {
+    animation: ten var(--glow-length) infinite alternate;
+    animation-delay: 0s !important;
+}
+
+.list-entries .score[score="9.5"] {
+    animation: ninepointfive var(--glow-length) infinite alternate;
+    animation-delay: 0s !important;
+}
+
+.list-entries .entry.row:has(.score[score="9.5"]) .title > a {
+    animation: ninepointfive var(--glow-length) infinite alternate;
+    animation-delay: 0s !important;
+}
+
+.list-entries .score[score="9"] {
+    animation: nine var(--glow-length) infinite alternate;
+    animation-delay: 0s !important;
+}
+
+.list-entries .entry.row:has(.score[score="9"]) .title > a {
+    animation: nine var(--glow-length) infinite alternate;
+    animation-delay: 0s !important;
+}
