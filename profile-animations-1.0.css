@@ -1,0 +1,35 @@
+/*════════  Profile Animations (Credit to @Sekuji for inspiration! Selectors and timings are mine. ════════*/
+
+/* Overview and Activities/Comments + Edits */
+.overview:has(.section .about) {
+    animation: fadeInUp var(--animation-timer-overview) var(--cubic-bezier);
+}
+.activity-feed .activity-entry .reply-wrap {
+    overflow: hidden !important;
+}
+.activity-feed .activity-entry {
+    animation: fadeInUp var(--animation-timer-activityfeed) var(--cubic-bezier) !important;
+}
+.activity-replies .reply, .activity-feed .activity-entry .input {
+    animation: fadeInRight var(--animation-timer-comments) var(--cubic-bezier);
+}
+.container > .activity-entry .reply, .container > .activity-entry .input {
+    animation: fadeInUp var(--animation-timer-comments) var(--cubic-bezier);  
+}
+.reply.preview, .container > .activity-entry .reply.preivew, .activity-feed-wrap > .activity-edit > .activity-entry.preview {
+    animation: fadeInDown var(--animation-timer-replypreview) var(--cubic-bezier) !important; 
+}
+.activity-feed .activity-entry:has(.el-dialog__wrapper) .input, .activity-feed .activity-entry:has(.el-dialog__wrapper) .reply.preview, .reply.preview blockquote, .reply.preview img, .reply.preview .youtube, .reply.preview video {
+    animation: unset;
+}
+.el-dialog.list-editor, .el-dialog.activity-editor-unscoped {
+    animation: fadeInUp var(--animation-timer-edit) var(--cubic-bezier);    
+}
+/* Medialists */
+.medialist .lists, .medialist {
+    animation: fadeInUp var(--animation-timer-medialist) var(--cubic-bezier);
+}
+/* All other profile tab loads */
+.favourites:not(.overview .favourites) .favourites .favourites-wrap.anime, .favourites:not(.overview .favourites) .favourites .favourites-wrap.manga, .favourites:not(.overview .favourites) .favourites .favourites-wrap.characters, .favourites:not(.overview .favourites) .favourites .favourites-wrap.staff, .favourites .favourites-wrap.studios, .stats-wrap[data-v-1e00b9da], .user-social .user-follow .wrap, .user-social .user-threads .wrap, .user-social .user-comments .wrap, .user-reviews, .submissions, .user-moderation {
+    animation: fadeInUp var(--animation-timer-load) var(--cubic-bezier);
+}
