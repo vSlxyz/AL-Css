@@ -1,0 +1,263 @@
+/*--- User Badges (Thanks to @Anzu for most of the code structure) ---*/
+
+@keyframes pseudoglow {
+  0% {
+    text-shadow:
+      0 0 2px rgba(var(--pseudo-title), 0.1),
+      0 0 4px rgba(var(--pseudo-title), 0.05);
+  }
+  100% {
+    text-shadow:
+      0 0 6px rgba(var(--pseudo-title), 0.9),
+      0 0 12px rgba(var(--pseudo-title), 1),
+      0 0 20px rgba(var(--pseudo-title), 0.85);
+  }
+}
+
+.header > a[href="/user/pseudo/"].name:after, .container > .activity-entry a[href="/user/pseudo/"].name:after { /* Me */
+    content: "utility pole ♛";
+    color: rgb(var(--pseudo-title)) !important;
+    animation: pseudoglow 1.5s infinite alternate;
+    animation-delay: 0s !important;
+}
+
+.header > .name:after { /* Non-mutuals and mutuals I either forgot or was too lazy to add */
+    content: "visitor ✧";
+}
+
+/* General title for mutuals. If you want a custom title, please feel free to message me! */
+.header > a[href="/user/Adeleine007/"].name:after,
+.header > a[href="/user/ahirushi/"].name:after,
+.header > a[href="/user/akilel/"].name:after,
+.header > a[href="/user/Amaterasu02/"].name:after,
+.header > a[href="/user/ames/"].name:after,
+.header > a[href="/user/anagapesis/"].name:after,
+.header > a[href="/user/AnimeDweeb/"].name:after,
+.header > a[href="/user/Asano/"].name:after,
+.header > a[href="/user/attqcktitan/"].name:after,
+.header > a[href="/user/Avanger/"].name:after,
+.header > a[href="/user/Axtrex/"].name:after,
+.header > a[href="/user/Ayuno/"].name:after,
+.header > a[href="/user/babymetal/"].name:after,
+.header > a[href="/user/Beatrice/"].name:after,
+.header > a[href="/user/bellemere/"].name:after,
+.header > a[href="/user/BlekDimon/"].name:after,
+.header > a[href="/user/BrainyElric/"].name:after,
+.header > a[href="/user/bun/"].name:after,
+.header > a[href="/user/Christian/"].name:after,
+.header > a[href="/user/ChronoLytte/"].name:after,
+.header > a[href="/user/Cosmos/"].name:after,
+.header > a[href="/user/daddytoji/"].name:after,
+.header > a[href="/user/Dan1811/"].name:after,
+.header > a[href="/user/das/"].name:after,
+.header > a[href="/user/DomG26/"].name:after,
+.header > a[href="/user/DOSS300/"].name:after,
+.header > a[href="/user/draiu/"].name:after,
+.header > a[href="/user/Estus/"].name:after,
+.header > a[href="/user/flashpool/"].name:after,
+.header > a[href="/user/GeneralMills/"].name:after,
+.header > a[href="/user/GreenRevue/"].name:after,
+.header > a[href="/user/hachiko/"].name:after,
+.header > a[href="/user/Hadowz/"].name:after,
+.header > a[href="/user/HeadlessHorseman/"].name:after,
+.header > a[href="/user/Helix101/"].name:after,
+.header > a[href="/user/HibikeEuphonium/"].name:after,
+.header > a[href="/user/hsasaki853/"].name:after,
+.header > a[href="/user/ibitsu/"].name:after,
+.header > a[href="/user/IceofBlizzard/"].name:after,
+.header > a[href="/user/inhibited/"].name:after,
+.header > a[href="/user/itte/"].name:after,
+.header > a[href="/user/JyojiFujisaki/"].name:after,
+.header > a[href="/user/kapokikko/"].name:after,
+.header > a[href="/user/KeyserElric/"].name:after,
+.header > a[href="/user/Kkobe/"].name:after,
+.header > a[href="/user/Kumiko/"].name:after,
+.header > a[href="/user/LordSozin/"].name:after,
+.header > a[href="/user/Lynnx/"].name:after,
+.header > a[href="/user/mikumi/"].name:after,
+.header > a[href="/user/nabieuryseiko/"].name:after,
+.header > a[href="/user/Naszon/"].name:after,
+.header > a[href="/user/NinosThighs/"].name:after,
+.header > a[href="/user/nony/"].name:after,
+.header > a[href="/user/Ofzen/"].name:after,
+.header > a[href="/user/PapaB/"].name:after,
+.header > a[href="/user/personnel/"].name:after,
+.header > a[href="/user/phife/"].name:after,
+.header > a[href="/user/Pksomuch/"].name:after,
+.header > a[href="/user/Pratoshii/"].name:after,
+.header > a[href="/user/prispanda/"].name:after,
+.header > a[href="/user/RandomGuy595/"].name:after,
+.header > a[href="/user/Rew/"].name:after,
+.header > a[href="/user/rice/"].name:after,
+.header > a[href="/user/Rinymn/"].name:after,
+.header > a[href="/user/Ryuseishun/"].name:after,
+.header > a[href="/user/saltflake/"].name:after,
+.header > a[href="/user/sanbe/"].name:after,
+.header > a[href="/user/seojuno/"].name:after,
+.header > a[href="/user/Septmb/"].name:after,
+.header > a[href="/user/shinraFN/"].name:after,
+.header > a[href="/user/SidVicious/"].name:after,
+.header > a[href="/user/SiriusStarlight/"].name:after,
+.header > a[href="/user/Soccerguy77/"].name:after,
+.header > a[href="/user/Sourtsunami/"].name:after,
+.header > a[href="/user/soyusauce/"].name:after,
+.header > a[href="/user/theherlocksholmes/"].name:after,
+.header > a[href="/user/tin/"].name:after,
+.header > a[href="/user/Tofflan/"].name:after,
+.header > a[href="/user/Ushio/"].name:after,
+.header > a[href="/user/uzolio/"].name:after,
+.header > a[href="/user/Vensito/"].name:after,
+.header > a[href="/user/vintagedeathscythe/"].name:after,
+.header > a[href="/user/waty/"].name:after,
+.header > a[href="/user/Wavieff/"].name:after,
+.header > a[href="/user/Wing/"].name:after,
+.header > a[href="/user/xloic13/"].name:after,
+.header > a[href="/user/YukikoGamingHD/"].name:after,
+.header > a[href="/user/zeliha/"].name:after,
+.header > a[href="/user/ZetaBM/"].name:after,
+.header > a[href="/user/ZNote/"].name:after {
+    content: "friend ☺";
+    color: rgb(var(--mutuals-title)) !important;
+}
+/* Custom Titles (Again, feel free to request) */
+.header > a[href="/user/Animusswtor/"].name:after {
+    content: "will miss Gintama in AMQ";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/befalt/"].name:after {
+    content: "Old Man 👴";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/bibichu/"].name:after {
+    content: "beep boop";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/Buttled/"].name:after {
+    content: "<— Bad PA Works Takes";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/JMack24/"].name:after {
+    content: "Alpha Hatsuseno";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/KinoKantRBD/"].name:after {
+    content: "Gooner";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/mermaid081/"].name:after {
+    content: "the world can be kind too";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/mt2903/"].name:after {
+    content: "consumes too much yuri";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/Palington/"].name:after {
+    content: "日本語上手！";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/Pawec/"].name:after {
+    content: "Big Business";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/Plestik/"].name:after {
+    content: "friend ☺";
+    color: #ffb6c1 !important;
+}
+.header > a[href="/user/Rishooooo/"].name:after {
+    content: "doesn't know what Nashville or Hawaii are";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/sekuji/"].name:after {
+    content: "CSS Goat 🐐";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/shubs/"].name:after {
+    content: "don't ask me what Undertale or Herobrine are";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/SirEmanon/"].name:after {
+    content: "Penguin Connoisseur 🐧";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/sumikasodomizer/"].name:after {
+    content: "Hitler";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/tdbn/"].name:after {
+    content: "toadbean";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/voidnyan/"].name:after {
+    content: "voidnyan is a stick.";
+    color: rgb(var(--custom-title)) !important;
+}
+.header > a[href="/user/yesKiri/"].name:after {
+    content: "ｗｉｄｅ";  
+    color: rgb(var(--custom-title)) !important;
+}
+
+.header > a[href="/user/Sodachi/"].name:after,
+.header > a[href="/user/Slusher/"].name:after {
+    content: "freak who enjoys 40°C weather (for some reason)";
+    color: rgb(var(--custom-title)) !important;
+}
+
+.reply .header > .avatar {
+    transform: scale(1.15);
+}
+
+.text > .header > .name {
+    position: relative;
+    bottom: 8px;
+    padding-bottom: 5px;
+}
+
+.header > .name {
+    position: relative;
+    bottom: 6px;
+    padding-bottom: 5px;
+}
+
+.container > .activity-entry .details > a[href="/user/pseudo/"].name {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.container > .activity-entry .details > .donator-badge {
+    margin-left: 22px;
+    margin-top: -1px;
+}
+
+.text > .header > .name:after, .container > .activity-entry .details > .name:after {
+    display: inline-block;
+    width: 260px;
+    margin-left: 0;
+    position: absolute;
+    left: 0;
+    top: 17px;
+    color: color-mix(in srgb,rgb(var(--color-blue)) var(--name-badge-mix), white) !important;
+    font-size: 11.5px;
+}
+
+.reply .header > .name:after {
+    display: inline-block;
+    width: 260px; 
+    margin-left: 0;
+    position: absolute;
+    left: 0;
+    top: 15.5px;
+    color: color-mix(in srgb,rgb(var(--color-blue)) var(--name-badge-mix), white) !important;
+    font-size: 10.5px;
+}
+
+.header .donator-badge {
+    margin-bottom: 18px;
+    margin-left: 15px;
+}
+
+.reply .header .donator-badge {
+    position: relative;
+    bottom: 8px;
+    margin-left: 17px;
+}
