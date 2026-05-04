@@ -1,0 +1,109 @@
+/*════════════════════════════════════════════
+    Missing Profile Colour Hovers V1.0.4 by @pseudo
+    https://anilist.co/user/pseudo/
+    Modular: PARTIALLY (Read Description)
+════════════════════════════════════════════*/
+
+/*════════════════════════════════════════════
+This snippet changes the hover colour of various elements that are out of the profile colour (--color-blue) scope to take a specified profile colour.
+It requires declaring both a --profile-color (HEX) and a --profile-color-rgb (RGB) value to be fully operational.
+This is because some selectors only take one or the other. You can just use Google to convert from HEX to RGB.
+
+Declaring a --master-transition-timer variable is also required if you want transitions to apply.
+If you've already borrowed one of my snippets, or have copied over my codebase entirely, you likely have this already set up, though.
+
+The reason that this is only partially modular is because I have some properties which are explicitly defined that you may not want for yourself.
+Examples include forced white text styling and bold styling to keep things consistent across the entire profile (which I am too lazy to part out).
+You're free to adjust or remove those yourself, of course; I just wanted to make that fact known as a heads up in case you intend to modify some of this.
+════════════════════════════════════════════*/
+
+/*--- Navbar and Overview ---*/
+#nav .primary-link-text {
+    color: #ffffff;
+}
+#app > div > div > div > .link:hover, .link[data-v-62eacfff]:hover, .primary-link .icon[data-v-38edf8f8]:hover, .primary-link-text[data-v-38edf8f8]:hover, .secondary-links a[data-v-38edf8f8]:hover, .primary-link:hover .icon[data-v-38edf8f8], .footer a[data-v-38edf8f8]:hover, .footer a:hover .icon[data-v-38edf8f8], .search[data-v-62eacfff]:hover svg, .primary-link[data-v-04b245e6]:hover, .primary-link:hover .icon[data-v-04b245e6], .secondary-link[data-v-04b245e6]:hover {
+    color: var(--profile-color) !important;
+    transition: var(--master-transition-timer) ease-in-out;
+}
+* {
+    scrollbar-color: rgb(var(--profile-color-rgb)) rgba(1, 1, 1, 0.1) !important;
+}
+.el-dropdown-menu__item:not(.is-disabled):hover svg {
+    color: var(--profile-color);
+    transition: var(--master-transition-timer) ease-in-out;
+}
+.void-static-tooltip.void-interactable:hover, .void-has-icon.void-icon-mr:hover {
+    color: var(--profile-color) !important;
+}
+.tooltip .circle.lv-1[data-v-b79eb0f0] {
+    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 65%);
+}
+.tooltip .circle.lv-3[data-v-b79eb0f0] {
+    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 45%);
+}
+.tooltip .circle.lv-5[data-v-b79eb0f0] {
+    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 25%);
+}
+.tooltip .circle.lv-7[data-v-b79eb0f0] {
+    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 5%);
+}
+.tooltip .circle.lv-9[data-v-b79eb0f0] {
+    background: color-mix(in srgb, rgb(var(--profile-color-rgb)), gray 0.1%);
+}
+
+/*--- Media List Dropdowns ---*/
+.el-select-dropdown__item.selected, .el-select-dropdown.is-multiple .el-select-dropdown__item.selected, .el-checkbox__input.is-checked+.el-checkbox__label {
+    color: var(--profile-color);
+}
+.el-message-box__headerbtn:hover .el-message-box__close, .el-dialog__headerbtn:hover .el-dialog__close {
+    color: var(--profile-color) !important;
+    transition: var(--master-transition-timer) ease-in-out;
+}  
+.el-select__tags-text {
+    color: #ffffff;
+}
+.el-select__tags .el-tag, .el-select__tags .el-tag--info, .el-select-dropdown.is-multiple .el-select-dropdown__item.selected {
+    background: rgba(120, 120, 120, 0.3);
+}
+
+/*--- List Editor Body, Calendars, and Hovers ---*/
+.el-dialog__wrapper.list-editor-wrap .save-btn, .list-editor-wrap .list-editor .body .delete-btn {
+    background: rgb(var(--profile-color-rgb));
+}
+.list-editor-wrap .list-editor .body .delete-btn:hover {
+    background: color-mix(in srgb, rgb(var(--profile-color-rgb)) 85%, white);
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner {
+    background-color: var(--profile-color);
+    border-color: var(--profile-color);
+}
+body > div.el-message-box__wrapper > div > div.el-message-box__btns > button.el-button.el-button--default.el-button--small.el-button--primary {
+    background-color: var(--profile-color);
+}
+.el-picker-panel, .el-picker-panel .el-date-picker__header-label, .el-picker-panel .el-picker-panel__icon-btn, .el-year-table td .cell, .el-month-table td .cell {
+    color: #ffffff;
+}
+.el-picker-panel .el-date-table td.next-month, .el-picker-panel .el-date-table td.prev-month {
+    color: #76777a;
+}
+.el-picker-panel .el-date-table th, .el-picker-panel .el-date-picker__header-label {
+    font-weight: 600;
+}
+.el-date-table td.available:hover, .el-picker-panel__icon-btn:hover, .el-date-picker__header-label:hover, .el-year-table td .cell:hover, .el-month-table td .cell:hover {
+    color: var(--profile-color);
+    transition: var(--master-transition-timer) ease-in-out;
+}
+.el-date-table td.today span, .el-picker-panel .el-date-table th, .el-year-table td.today .cell, .el-year-table td.current:not(.disabled) .cell, .el-month-table td.today .cell, .el-month-table td.current:not(.disabled) .cell {
+    color: var(--profile-color);   
+}
+.el-date-table td.current:not(.disabled) span, .el-picker-panel .el-date-table td.current:not(.disabled) span {
+    background-color: var(--profile-color);
+}
+
+/*--- Social Tab Numbers (only visible with Automail) ---*/
+
+.user-social .filter-group > span.active > span, .user-social .filter-group > span:nth-child(2) > span, .user-social .filter-group > span:nth-child(3) > span, .user-social .filter-group > span:nth-child(6) > span, .user-social .filter-group > span:nth-child(7) > span, .user-social .filter-group > span:nth-child(8) > span {
+    color: var(--profile-color);
+    font-weight: 550;
+}
