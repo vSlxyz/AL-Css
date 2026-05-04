@@ -1,0 +1,114 @@
+/*════════════════════════════════════════════
+    Border-Radius Styling V1.0.6 by @pseudo
+    https://anilist.co/user/pseudo/
+    Modular: YES
+════════════════════════════════════════════*/
+
+/*════════════════════════════════════════════
+This snippet applies a border-radius to practically every possible corner element on profiles.
+You can increase or decrease it as you please. A higher value will mean more rounded corners, and a lower value will mean sharper corners. AniList's default is 4px.
+One notable thing to mention is that this also targets user avatars, which typically do not have any border-radius applied.
+
+The only thing you have to do is to declare a --border-radius variable (and its px specification) in your CSS.
+There are some elements which are simply part of the container of a larger one (E.G. the profile navbar) that have more specific styling rules applied.
+These often do not require all four corners to be targeted by border-radius, and thus are manually specified here in this snippet.
+
+One potential thing to be aware of is that this snippet includes my personal overflow modifications as necessary (E.G. so that hover tooltips can display as intended).
+Consequent border-radius declarations are made, but you may experience some unintended side effects depending on your profile implementation.
+Any possible side-effects won't be with border-radius itself, however, which is why this is still overall modular.
+
+Feel free to contact me at the link above if there are any issues you run into.
+ ════════════════════════════════════════════*/
+
+/*═══ Main Selector Spam ═══*/
+body:has(.content > .overview, .favourites .favourites) .tooltip, body:has(.content > .overview, .favourites .favourites) .tooltip .title, .stats-wrap > .content-wrap, .about > .content-wrap, .desktop > .content-wrap, .activity-entry > .wrap, .favourites-wrap > .favourite, .scroller > .load-more, .user-page-unscoped .markdown-editor, .el-textarea__inner, .input, .user-moderation .btn, .activity-replies > .reply, .donator-badge, .button, .el-dialog.list-editor, .el-dialog.list-editor *, .el-message-box, .el-message-box__btns *, .el-picker-panel__body-wrapper, .el-picker-panel.el-date-picker.el-popper, .el-select-dropdown.el-popper, .list-section, .filter-mobile-wrap *, .markdown .markdown-spoiler:before, .reply .markdown-spoiler::before, .filter-group *, .theme-switch, .void-static-tooltip, .donator-badge.private-badge.has-label::before, .medialist.table .entry .cover .image, .el-tooltip.random-btn, .compare[data-v-75f21ff1], .el-tooltip__popper, .action.has-label::before, .favourites .favourites-wrap, .stats .bar-chart-wrap, .stats .pie-chart, .stats .ps-container, .stats .stat-card, .user-comments .avatar, .user-threads .avatar, .favourites > .favourites .delete, .relation-card .image, .tooltip.animate-position.bottom, .tooltip.animate-position.bottom .title, .tooltip.animate-position.top, .tooltip.animate-position.top .title, .stat-cards.has-images .wrap > .image, .user-social .thread-card, .user-social .comment-wrap, .embed, .review-card, .medialist.cards .entry-card .cover .image, .users .user, .medialist.cards .entry-card .edit, .medialist .notes:before, .markdown img, .markdown .youtube, .markdown video, .void-mini-profile-container, .void-mini-profile-container *, .activity-feed-wrap blockquote, .comment blockquote, .container > .activity-entry blockquote, .el-dropdown-menu, #nav .dropdown, #nav .dropdown .footer, .medialist.table.compact .entry .edit, .history-day, .el-input, .el-input__inner, .quick-search.visible .result-col, .quick-search.visible .result-col:not(:nth-child(6)) .image, .markdown .markdown-spoiler:before, .mod-badge-wrap.follower-badge, .actions .nav-btn, .void-button, .filter-group.compare-btn, .el-message, .submissions-page .submission, .submission .status, .medialist.table .entry .edit, .reply.preview, .list-wrap .repeat::before, .el-dialog.activity-editor-unscoped, .el-dialog__body, .follow-card .avatar, .unfollow, .container > .activity-entry .markdown-editor, .activity-entry .avatar, #nav .avatar {
+    border-radius: var(--border-radius) !important;
+}
+
+/*═══ List Editor Header (the banner with the media image) ═══*/
+.el-dialog.list-editor .header {
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+/*═══ List Editor Custom Lists ═══*/
+.el-dialog.list-editor .custom-lists {
+    border-radius: initial !important;
+}
+
+/*═══ Nav Dropdown Footers ═══*/
+#nav .dropdown .footer {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
+
+/*═══ Medialists Final Row ═══*/
+/* (I leave list wrap overflows on to account for expanded list notes, but you could just turn overflow off instead to bypass the need for this) */
+.medialist.table .entry:last-child:hover {
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+/*═══ Stats Page Stats Bars ═══*/
+.bar-chart .bar-wrap .bar {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+/*═══ Stats Page Tooltips ═══*/
+body:has(.stats-wrap > .overview > .highlights) .tooltip .title {
+    border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+}
+
+/*═══ Turning off overflow on Quick Search for hover border-radius to display as intended ═══*/
+.quick-search.visible > .results > .result-col {
+    overflow: hidden;
+}
+
+/*═══ Turning off overflow for dropdowns ═══*/
+.el-select-dropdown.el-popper {
+    overflow: hidden;
+}
+
+/*═══ Global Navbar ═══*/
+#nav.nav { 
+    border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
+}
+
+/*═══ Container Top ═══*/
+.header-wrap > .nav-wrap {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+/*═══ Container Content ═══*/
+.content.container {
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+/*═══ Grid List View Title Background ═══*/
+.medialist.cards .entry-card .title {
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+/*═══ List Activity Covers (with overflow off) ═══*/
+.activity-feed .activity-entry.activity-anime_list .cover, .activity-feed .activity-entry.activity-manga_list .cover {
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    overflow: hidden;
+}
+
+/*═══ List Activity Cover Arrow Dropdown ═══*/
+/* If you implement this, I would potentially recommend writing your own CSS to change the size of the arrow itself. It doesn't look that good left as-is with a more aggressive border-radius. */
+.list.small .entry-dropdown[data-v-04d66030] {
+    border-radius: 0 0 var(--border-radius) 0;
+}
+
+/*═══ Compare Page ═══*/
+[data-v-75f21ff1] .entry:first-child:hover {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+[data-v-75f21ff1] .entry:last-child:hover {
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.markdown .markdown-spoiler:before, .reply .markdown-spoiler::before {
+    border-radius: var(--border-radius);
+}
