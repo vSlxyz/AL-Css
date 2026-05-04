@@ -1,0 +1,76 @@
+/*════════════════════════════════════════════
+    Foreground Elements by @voidnyan
+    https://anilist.co/user/voidnyan/
+    Modular: YES
+════════════════════════════════════════════*/
+
+/*════════════════════════════════════════════
+This snippet hooks onto a bunch of foreground selectors and changes them to take a --foreground (or related) variable.
+Modular as long as you specify these own variables in your CSS (or if you sample from my codebase).
+It's a somewhat technical explanation as to why just changing existing --color variables using Anzu's Simple Theme Framework isn't as reliable as this snippet.
+
+Direct activity styling/CSS is only viewable with VoidVerified, and this snippet adds a blur to those foreground elements.
+This is because there's no container backdrop to help for readability, so a blur is imposed in addition to a darker foreground.
+You're free to change these variables around for yourself if you paste this snippet into your stylesheet instead of importing it, of course.
+ ════════════════════════════════════════════*/
+
+/*════════ Main Foregrounds ════════*/
+.markdown-editor,
+.el-textarea textarea,
+.list-section,
+.lists .theme-switch,
+.filter-group .active,
+.filters-wrap input,
+.el-slider__runway,
+.load-more,
+.favourites .favourites .favourites-wrap,
+.overview .favourites .favourites-wrap,
+.stats .circle,
+.stats .switch,
+.stats .bar-chart-wrap,
+.stats .pie-chart,
+.stats .line-chart-wrap,
+.filter-group .router-link-active,
+.ps-container.horizontal-scroller,
+.stats .stat-card,
+.review-card,
+.el-input__inner,
+.genre-overview.content-wrap,
+.activity-history.content-wrap,
+.content-wrap,
+.footer,
+.activity-feed-wrap .wrap,
+.activity-feed-wrap .reply,
+.el-input,
+.comment-wrap.depth-0.even,
+.thread-card,
+.activity-feed-wrap blockquote,
+.comment blockquote,
+.markdown-spoiler::before,
+.markdown-spoiler.spoiler-visible span,
+.embed,
+.container > .activity-entry blockquote,
+.input,
+.stats-wrap .progress,
+.submissions-page .submission,
+.scrollableContent *{
+    background: var(--foreground) !important;
+}
+
+/*════════ Direct Activity Foregrounds ════════*/
+.container > .activity-entry .wrap,
+.container > .activity-entry .reply,
+.container > .activity-entry .markdown-editor,
+.container > .activity-entry .el-textarea__inner {
+    background: var(--foreground) !important;
+}
+
+/*════════ List Editor Foreground ════════*/
+.body {
+    background: var(--list-editor-foreground) !important;
+}
+
+/*════════ Quick Search Foregrounds ════════*/
+.result-col {
+    background: var(--quick-search-results) !important;
+}
