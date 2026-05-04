@@ -1,0 +1,506 @@
+/*--- Hidamari Sketch x Honeycomb (HidaSketch) ---*/
+.favourites.preview a.favourite[href*="anime/11239"] {
+    background-image: url(https://i.imgur.com/Drih9ok.jpeg) !important;
+    grid-column: 1 / 5;
+    min-height: 150px !important;
+}
+.favourites.preview a.favourite[href*="anime/11239"]:hover {
+    box-shadow: var(--box-shadow) #978b53;
+}
+.favourites a.favourite[href*="anime/11239"]:hover {
+    box-shadow: var(--box-shadow) #89d191;
+}
+
+/*--- Aria the Origination ---*/
+.favourites.preview a.favourite[href*="anime/3297"] {
+    background-image: url(https://i.imgur.com/WdZRZ8z.jpeg) !important;
+    grid-column: 1 / 5;
+    min-height: 150px !important;
+}
+.favourites.preview a.favourite[href*="anime/3297"]:hover {
+    box-shadow: var(--box-shadow) #bea5a7;
+}
+.favourites a.favourite[href*="anime/3297"]:hover {
+    box-shadow: var(--box-shadow) #5191f3;
+}
+
+/*--- Tamayura Ashita ---*/
+.favourites.preview a.favourite[href*="anime/21554"] {
+    background-image: url(https://i.imgur.com/uWP4CO2.jpeg) !important;
+    grid-column: 1 / 3;
+}
+.favourites.preview a.favourite[href*="anime/21554"]:hover {
+    box-shadow: var(--box-shadow) #f2dbd3;
+}
+.favourites a.favourite[href*="anime/21554"]:hover {
+    box-shadow: var(--box-shadow) #f9e6ec;
+}
+
+/*--- Mushishi ---*/
+.favourites.preview a.favourite[href*="anime/457/"] {
+    background-image: url(https://i.imgur.com/F8bIQDu.jpeg) !important;
+    grid-column: 3 / 5;
+}
+.favourites.preview a.favourite[href*="anime/457"]:hover {
+    box-shadow: var(--box-shadow) #523c29;
+}
+.favourites a.favourite[href*="anime/457"]:hover {
+    box-shadow: var(--box-shadow) #434b39;
+}
+
+/*--- Liz and the Blue Bird ---*/
+.favourites a.favourite[href*="anime/100178"]:hover {
+    box-shadow: var(--box-shadow) #87cbde;
+}
+
+/*--- Sorayori (A Place Further Than The Universe) ---*/
+.favourites a.favourite[href*="anime/99426"]:hover {
+    box-shadow: var(--box-shadow) #ea8025;
+}
+
+/*--- Ashita no Joe 2 ---*/
+.favourites a.favourite[href*="anime/2921"]:hover {
+    box-shadow: var(--box-shadow) #d72a35;
+}
+
+/*--- Non Non Biyori ---*/
+.favourites a.favourite[href*="anime/17549"]:hover {
+    box-shadow: var(--box-shadow) #54c417;
+}
+/*--- Sonny Boy ---*/
+.favourites a.favourite[href*="anime/132126"]:hover {
+    box-shadow: var(--box-shadow) #b9b496;
+}
+
+/*--- Tamako Love Story ---*/
+.favourites a.favourite[href*="anime/20519"]:hover {
+    box-shadow: var(--box-shadow) #c1f378;
+}
+
+/*--- Oregairu Zoku (Anime) ---*/
+.favourites a.favourite[href*="anime/20698"]:hover {
+    box-shadow: var(--box-shadow) #aa7984;
+}
+
+/*--- Hyouka (Anime)---*/
+.favourites a.favourite[href*="anime/12189"]:hover {
+    box-shadow: var(--box-shadow) #f4c1be;
+}
+
+/*--- Akage no Anne ---*/
+.favourites a.favourite[href*="anime/283"]:hover {
+    box-shadow: var(--box-shadow) #f9e8d9;
+}
+
+/*--- Girls' Last Tour (Anime) ---*/
+.favourites a.favourite[href*="anime/99420"]:hover {
+    box-shadow: var(--box-shadow) #475652;
+}
+
+/*--- Chihayafuru (Anime) ---*/
+.favourites a.favourite[href*="anime/10800"]:hover {
+    box-shadow: var(--box-shadow) #94c83b;
+}
+
+/*--- Shirobako ---*/
+.favourites a.favourite[href*="anime/20812"]:hover {
+    box-shadow: var(--box-shadow) #5287d7;
+}
+
+/*--- Haibane Renmei ---*/
+.favourites a.favourite[href*="anime/387"]:hover {
+    box-shadow: var(--box-shadow) #88a7b0;
+}
+
+/*--- Yuru Camp ---*/
+#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(17) {
+    background-size: 102% !important;
+}
+
+#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(17):hover {
+    background-size: 110% !important;
+}
+
+.favourites a.favourite[href*="anime/98444"]:hover {
+    box-shadow: var(--box-shadow) #6f62a9;
+}
+
+/*--- Hunter x Hunter (1999) ---*/
+.favourites a.favourite[href*="anime/136"]:hover {
+    box-shadow: var(--box-shadow) #7aa845;
+}
+
+/*--- Nana (Anime) ---*/
+.favourites a.favourite[href*="anime/877"]:hover {
+    box-shadow: var(--box-shadow) #e3c690;
+}
+
+#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(20) {
+    background-size: 105% !important;
+}
+
+#app > div.page-content > div > div.content.container > div > div:nth-child(1) > div:nth-child(4) > div > a:nth-child(20):hover {
+    background-size: 113% !important;
+}
+
+/*--- Sakura Quest ---*/
+.favourites a.favourite[href*="anime/97903"]:hover {
+    box-shadow: var(--box-shadow) #c0cc68;
+}
+
+/*--- Bloom Into You (Manga)---*/
+.favourites.preview a.favourite[href*="manga/86218"] {
+    background-image: url(https://i.imgur.com/BoMyBZW.jpeg) !important;
+    grid-column: 1 / 5;
+    min-height: 150px !important;
+}
+.favourites.preview a.favourite[href*="manga/86218"]:hover {
+    box-shadow: var(--box-shadow) #29325a;
+}
+.favourites a.favourite[href*="manga/86218"]:hover {
+    box-shadow: var(--box-shadow) #e9978c;
+}
+
+/*--- White Album 2 (VN)---*/
+.favourites.preview a.favourite[href*="manga/91579/"] {
+    background-image: url(https://i.imgur.com/Ygz1muy.jpeg) !important;
+    grid-column: 1 / 5;
+    min-height: 150px !important;
+}
+.favourites.preview a.favourite[href*="manga/91579"]:hover {
+    box-shadow: var(--box-shadow) #03214e;
+}
+.favourites a.favourite[href*="manga/91579"] {
+    background-image: url(https://i.imgur.com/cimoFig.jpeg) !important;
+}
+.favourites a.favourite[href*="manga/91579"]:hover {
+    box-shadow: var(--box-shadow) #e4daf9;
+}
+
+/*--- Oregairu (Light Novel) ---*/
+.favourites a.favourite[href*="manga/70171"]:hover {
+    box-shadow: var(--box-shadow) #9c99ad;
+}
+
+/*--- Adachi and Shimamura 99.9 ---*/
+.favourites.preview a.favourite[href*="manga/169725"] {
+    background-image: url(https://i.imgur.com/NS5bpx0.jpeg) !important;
+}
+.favourites a.favourite[href*="manga/169725"]:hover {
+    box-shadow: var(--box-shadow) #9ac2c7;
+}
+
+/*--- Yokohama Kaidashi Kikou (YKK) ---*/
+.favourites a.favourite[href*="manga/30004"]:hover {
+    box-shadow: var(--box-shadow) #abd2d9;
+}
+
+/*--- Flying Witch ---*/
+.favourites a.favourite[href*="manga/76258"]:hover {
+    box-shadow: var(--box-shadow) #7d6d5e;
+}
+
+/*--- Houseki no Kuni ---*/
+.favourites a.favourite[href*="manga/74489"]:hover {
+    box-shadow: var(--box-shadow) #97f4e1;
+}
+
+/*--- Perfect World ---*/
+.favourites a.favourite[href*="manga/93433"]:hover {
+    box-shadow: var(--box-shadow) #ff6a88;
+}
+
+/*--- Chihayafuru (Manga) ---*/
+.favourites a.favourite[href*="manga/43245"]:hover {
+    box-shadow: var(--box-shadow) #fa8d65;
+}
+
+/*--- Girls' Last Tour (Manga) ---*/
+.favourites a.favourite[href*="manga/85412"]:hover {
+    box-shadow: var(--box-shadow) #919496;
+}
+
+/*--- Akari Mizunashi (Aria) ---*/
+.favourites a.favourite[href*="character/378"]:hover {
+    box-shadow: var(--box-shadow) #e883cb;
+}
+
+/*--- Yuu Koito (Bloom Into You) ---*/
+.favourites a.favourite[href*="character/123528"]:hover {
+    box-shadow: var(--box-shadow) #f6aa93;
+}
+
+/*--- Taichi Mashima (Chihayafuru) ---*/
+.favourites a.favourite[href*="character/47167"]:hover {
+    box-shadow: var(--box-shadow) #fcd189;
+}
+
+/*--- Joe Yabuki (Ashita no Joe) ---*/
+.favourites a.favourite[href*="character/11804"]:hover {
+    box-shadow: var(--box-shadow) #de3622;
+}
+
+/*--- Kazuho Miyauchi/Kazu-nee (Non Non Biyori) ---*/
+.favourites a.favourite[href*="character/87832"]:hover {
+    box-shadow: var(--box-shadow) #8d7682;
+}
+
+/*--- Alice Carroll (Aria) ---*/
+.favourites a.favourite[href*="character/382"]:hover {
+    box-shadow: var(--box-shadow) #90aaae;
+}
+
+/*--- Fuu Sawatari/Potte (Tamayura) ---*/
+.favourites a.favourite[href*="character/35468"]:hover {
+    box-shadow: var(--box-shadow) #e7dfda;
+}
+
+/*--- Rin Shima (Yuru Camp) ---*/
+.favourites a.favourite[href*="character/124586"]:hover {
+    box-shadow: var(--box-shadow) #667190;
+}
+
+/*--- Aoi Miyamori (Shirobako) ---*/
+.favourites a.favourite[href*="character/88651"]:hover {
+    box-shadow: var(--box-shadow) #ebaf69;
+}
+/*--- Yukino Yukinoshita (Oregairu) ---*/
+.favourites a.favourite[href*="character/67067"]:hover {
+    box-shadow: var(--box-shadow) #a3a1b1;
+}
+
+/*--- Yoshino (Sakura Quest) ---*/
+.favourites a.favourite[href*="character/121530"]:hover {
+    box-shadow: var(--box-shadow) #f2c3c4;
+}
+
+/*--- Touko Nanami (Bloom Into You/Yagate Kimi Ni Naru/YagaKimi) ---*/
+.favourites a.favourite[href*="character/123529"]:hover {
+    box-shadow: var(--box-shadow) #847676;
+}
+
+/*--- Saeki Sayaka (Character) (Bloom Into You/Saeki Sayaka ni Tsuite) ---*/
+.favourites a.favourite[href*="character/123530"]:hover {
+    box-shadow: var(--box-shadow) #c69885;
+}
+
+/*--- Yuno (Hidamari Sketch/HidaSketch) ---*/
+.favourites a.favourite[href*="character/2528"]:hover {
+    box-shadow: var(--box-shadow) #a58760;
+}
+
+/*--- Hiro (Hidamari Sketch/HidaSketch) ---*/
+.favourites a.favourite[href*="character/3216"]:hover {
+    box-shadow: var(--box-shadow) #f1c8a5;
+}
+
+/*--- Kazusa Touma (White Album 2) ---*/
+.favourites a.favourite[href*="character/82119"]:hover {
+    box-shadow: var(--box-shadow) #2a4964;
+}
+
+/*--- Setsuna Ogiso (White Album 2) ---*/
+.favourites a.favourite[href*="character/82115"]:hover {
+    box-shadow: var(--box-shadow) #bc7540;
+}
+
+/*--- Renge Miyauchi (Non Non Biyori) ---*/
+.favourites a.favourite[href*="character/54151"]:hover {
+    box-shadow: var(--box-shadow) #bdaec8;
+}
+
+/*--- Nori (Hidamari Sketch) ---*/
+.favourites a.favourite[href*="character/14914"]:hover {
+    box-shadow: var(--box-shadow) #9baeb4;
+}
+
+/*--- Shimamura (AdaShima) ---*/
+.favourites a.favourite[href*="character/144718"]:hover {
+    box-shadow: var(--box-shadow) #d6c8bf;
+}
+
+/*--- Makoto Kowata (Flying Witch) ---*/
+.favourites a.favourite[href*="character/89401"]:hover {
+    box-shadow: var(--box-shadow) #efd7d3;
+}
+
+/*--- Naoko Yamada ---*/
+.favourites a.favourite[href*="staff/102498"]:hover {
+    box-shadow: var(--box-shadow) #bf9983;
+}
+
+/*--- Junichi Satou ---*/
+.favourites a.favourite[href*="staff/99002"]:hover {
+    box-shadow: var(--box-shadow) #f7e8c9;
+}
+
+/*--- Osamu Dezaki ---*/
+.favourites a.favourite[href*="staff/100393"]:hover {
+    box-shadow: var(--box-shadow) #9cb5d9;
+}
+/*--- Isao Takahata ---*/
+.favourites a.favourite[href*="staff/100579"]:hover {
+    box-shadow: var(--box-shadow) #c0cee8;
+}
+
+/*--- Hitoma Iruma ---*/
+.favourites a.favourite[href*="staff/99956"] {
+    background-image: url(https://i.imgur.com/KSDg3ur.jpeg) !important;
+}
+.favourites a.favourite[href*="staff/99956"]:hover {
+    box-shadow: var(--box-shadow) #8e7888;
+}
+
+/*--- Reiko Yoshida ---*/
+.favourites a.favourite[href*="staff/97076"] {
+    background-image: url(https://i.imgur.com/G94ZngY.jpeg) !important;
+}
+
+.favourites a.favourite[href*="staff/97076"]:hover {
+    box-shadow: var(--box-shadow) #737c43;
+}
+
+/*--- Kensuke Ushio ---*/
+.favourites a.favourite[href*="staff/119254"]:hover {
+    box-shadow: var(--box-shadow) #a1b2c8;
+}
+
+/*--- Choro Club ---*/
+.favourites a.favourite[href*="staff/101379"]:hover {
+    box-shadow: var(--box-shadow) #a88a62;
+}
+
+/*--- Kana Hanazawa ---*/
+.favourites a.favourite[href*="staff/95185"]:hover {
+    box-shadow: var(--box-shadow) #dcba19;
+}
+
+/*--- Ayane Sakura ---*/
+.favourites a.favourite[href*="staff/106622"]:hover {
+    box-shadow: var(--box-shadow) #b2b3c6;
+}
+
+/*--- Aoi Yuuki ---*/
+.favourites a.favourite[href*="staff/101686"]:hover {
+    box-shadow: var(--box-shadow) #7d9abc;
+}
+
+/*--- marble ---*/
+.favourites a.favourite[href*="staff/104831"]:hover {
+    box-shadow: var(--box-shadow) #eaecea;
+}
+
+/*--- Ponkan 8 ---*/
+.favourites a.favourite[href*="staff/114844"] {
+    background-image: url(https://i.imgur.com/KWIFF0I.jpeg) !important;
+}
+.favourites a.favourite[href*="staff/114844"]:hover {
+    box-shadow: var(--box-shadow) #f18a78;
+}
+
+/*--- Akiyuki Shinbou ---*/
+.favourites a.favourite[href*="staff/100089"]:hover {
+    box-shadow: var(--box-shadow) #e2dcdf;
+}
+
+/*--- Ume Aoki ---*/
+.favourites a.favourite[href*="staff/97969"] {
+    background-image: url(https://i.imgur.com/jkB9w75.jpeg) !important;
+}
+.favourites a.favourite[href*="staff/97969"]:hover {
+    box-shadow: var(--box-shadow) #4c5784;
+}
+
+/*--- Kyoto Animation (KyoAni) ---*/
+a.favourite[href*="studio/2/"] {
+    background-image: url(https://i.imgur.com/gEHSbUA.jpeg) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+.favourites a.favourite.studio[href*="studio/2/"]:hover::after {
+    box-shadow: var(--box-shadow) #c9aea7 !important;
+}
+.overview .about a[href="kyoanitooltip"]::before {
+    text-align: center;
+    content: "kyoto animation";
+    white-space: nowrap;
+    font-weight: 700;
+    position: absolute;
+    top: calc(var(--about-height) + 1904px);
+    left: 204px;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 6px 11px 6px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.26s ease-in-out;
+    pointer-events: none;
+    color: white;
+    z-index: 15;
+}
+.overview .about a[href="kyoanitooltip"]::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--about-height) + 1925px);
+    left: 204px;
+    transform: translate(-50%, -50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0;
+    transition: opacity 0.26s ease-in-out;
+    z-index: 15;
+    pointer-events: none;
+}
+body:has(.favourites a.favourite.studio[href*="studio/2/"]:hover) .overview .about a[href="kyoanitooltip"]::before, body:has(.favourites a.favourite.studio[href*="studio/2/"]:hover) .overview .about a[href="kyoanitooltip"]::after {
+    opacity: 1;
+}
+
+/*--- P.A. Works (PA Works) ---*/
+a.favourite[href*="studio/132/"] {
+    background-image: url("https://i.imgur.com/VSpqiBv.jpeg") !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+.favourites a.favourite.studio[href*="studio/132/"]:hover::after {
+    box-shadow: var(--box-shadow) #ffffff !important;
+}
+.overview .about a[href="paworkstooltip"]::before {
+    text-align: center;
+    content: "p.a. works";
+    white-space: nowrap;
+    font-weight: 700;
+    position: absolute;
+    top: calc(var(--about-height) + 2066px);
+    left: 204px;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 6px 11px 6px 12px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.26s ease-in-out;
+    pointer-events: none;
+    color: white;
+    z-index: 15;
+}
+.overview .about a[href="paworkstooltip"]::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--about-height) + 2087px);
+    left: 204px;
+    transform: translate(-50%, -50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(10, 10, 10, 0.9) transparent transparent transparent;
+    opacity: 0;
+    transition: opacity 0.26s ease-in-out;
+    z-index: 15;
+    pointer-events: none;
+}
+body:has(.favourites a.favourite.studio[href*="studio/132/"]:hover) .overview .about a[href="paworkstooltip"]::before, body:has(.favourites a.favourite.studio[href*="studio/132/"]:hover) .overview .about a[href="paworkstooltip"]::after {
+    opacity: 1;
+}
