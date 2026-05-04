@@ -1,0 +1,417 @@
+  /*════════════════════════════════════════════
+    Favourites Tab
+  ════════════════════════════════════════════*/
+
+/*════════ Opening Message ════════*/
+.favourites:not(.overview .favourites) {
+    margin-top: 39px;
+}
+
+.favourites .favourites:nth-child(1) .section-header::before {
+    position: absolute;
+    font-size: 16px;
+    font-style: italic;
+    top: -614px;
+    left: 311px;
+    visibility: visible;
+    color: white;
+    content: "anime & manga showcase images change upon hovering a favourite\A shift+scroll or use arrow keys to horizontally navigate the carousel";
+    text-align: center;
+    white-space: pre-wrap;
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+}
+
+  /*════════════════════════════════════════════
+    Anime Grid
+  ════════════════════════════════════════════*/
+  
+/*════════ Showcase Box ════════*/
+.favourites:not(.overview .favourites) .favourites:nth-child(1)::before {
+    content: "" !important;
+    display: block !important;
+    width: 100% !important;
+    height: 560px !important;
+    background: var(--foreground) !important;
+    border-radius: var(--border-radius);
+    border: var(--border) solid rgb(var(--color-blue)) !important;
+    animation: fadeInUp var(--animation-timer-load) var(--cubic-bezier);
+}
+
+/*════════ Showcase Image ════════*/
+.favourites:not(.overview .favourites) .favourites:nth-child(1)::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 86px;
+    left: 94px;
+    width: 1054px;
+    height: 524px;
+    background: url(https://i.imgur.com/ufGkqzT.jpeg);
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    border-radius: var(--border-radius);
+    background-size: cover !important;
+    z-index: 2;
+    transition: background var(--master-transition-timer) var(--layout-delay) ease-in-out;
+    animation: fadeInUp var(--animation-timer-load) var(--cubic-bezier);
+}
+
+body:has(a.favourite:hover) .favourites .favourites:nth-child(1)::after {
+    transition: background var(--master-transition-timer) 0s ease-in-out;
+}
+ 
+/*════════ Favourites Grid ════════*/ 
+.favourites:not(.overview .favourites) .favourites-wrap.anime {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: unset;
+    overscroll-behavior-x: contain;
+    scroll-behavior: smooth;
+    display: flex;
+    justify-content: flex-start;
+    gap: 22.5px;
+    padding-inline: 18px !important;
+    scroll-padding-inline: 18px !important;
+    scroll-snap-type: x proximity;
+    cursor: grab;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.favourites:not(.overview .favourites) .favourites-wrap.anime:focus,
+.favourites:not(.overview .favourites) .favourites-wrap.anime:focus-within {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+}
+
+.favourites:not(.overview .favourites) .favourite {
+    min-width: 85px;
+    scroll-snap-align: start;
+}
+
+  /*════════════════════════════════════════════
+    Manga Grid
+  ════════════════════════════════════════════*/
+  
+/*════════ Showcase Box ════════*/
+.favourites:not(.overview .favourites) .favourites:nth-child(2)::before {
+    content: "" !important;
+    display: block !important;
+    width: 100% !important;
+    height: 560px !important;
+    background: var(--foreground) !important;
+    border-radius: var(--border-radius);
+    border: var(--border) solid rgb(var(--color-blue)) !important;
+    animation: fadeInUp var(--animation-timer-load) var(--cubic-bezier);
+}
+
+/*════════ Showcase Image ════════*/
+.favourites:not(.overview .favourites) .favourites:nth-child(2)::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 909px;
+    left: 94px;
+    width: 1054px;
+    height: 524px;
+    background: url(https://i.imgur.com/cfq1gDT.jpeg);
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    border-radius: var(--border-radius);
+    background-size: cover !important;
+    z-index: 2;
+    transition: background var(--master-transition-timer) var(--layout-delay) ease-in-out;
+    animation: fadeInUp var(--animation-timer-load) var(--cubic-bezier);
+}
+
+body:has(a.favourite:hover) .favourites .favourites:nth-child(2)::after {
+    transition: background var(--master-transition-timer) 0s ease-in-out;
+}
+ 
+/*════════ Favourites Grid ════════*/ 
+.favourites:not(.overview .favourites) .favourites-wrap.manga {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: unset;
+    overscroll-behavior-x: contain;
+    scroll-behavior: smooth;
+    display: flex;
+    justify-content: flex-start;
+    gap: 22.5px;
+    padding-inline: 18px !important;
+    scroll-padding-inline: 18px !important;
+    scroll-snap-type: x proximity;
+    position: relative;
+    margin-bottom: 52px;
+}
+
+  /*════════════════════════════════════════════
+    Characters Grid
+  ════════════════════════════════════════════*/
+
+.favourites:not(.overview .favourites) .favourites-wrap.characters {
+    display: grid !important;
+    grid-gap: 12px !important;
+    grid-template-columns: repeat(5, 85px) !important;
+    grid-template-rows: unset !important;  
+    grid-auto-rows: minmax(120px, auto) !important;
+    column-gap: 17px !important;
+    padding: 13px !important;
+    padding-top: 18px !important;
+    justify-content: center !important;
+    width: 530px !important;
+    max-height: 417px;
+    overflow-x: hidden !important;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    scroll-padding: 18px !important;
+    padding-inline: 18px !important;
+}
+
+  /*════════════════════════════════════════════
+    Staff Grid
+  ════════════════════════════════════════════*/
+
+.favourites:not(.overview .favourites) .favourites-wrap.staff {
+    position: absolute !important;
+    top: 1713.5px !important;
+    left: 635px;
+    display: grid !important;
+    grid-gap: 12px !important;
+    grid-template-columns: repeat(5, 85px) !important;
+    grid-template-rows: unset !important;  
+    grid-auto-rows: minmax(120px, auto) !important;
+    column-gap: 17px !important;
+    padding: 13px !important;
+    padding-top: 18px !important;
+    justify-content: center;
+    width: 530px !important;
+}
+
+  /*════════════════════════════════════════════
+    Studios Grid
+  ════════════════════════════════════════════*/
+
+.favourites:not(.overview .favourites) .favourites-wrap.studios {
+    margin-top: -70px;
+    display: grid !important;
+    grid-template-columns: repeat(2, 376px) !important; 
+    grid-template-rows: unset !important;
+    grid-auto-rows: minmax(120px, auto) !important;
+    justify-items: center; 
+    justify-content: center; 
+    max-width: 100%; 
+    width: 100%; 
+    column-gap: 119px !important; 
+}
+
+.favourites:not(.overview .favourites) .favourite.studio {
+    top: 5px;
+    min-height: 135px;
+    position: relative;
+    color: transparent;
+    margin-top: -5px !important;
+    margin-bottom: 6px !important;
+    box-shadow: none !important;
+    width: 416px !important; 
+}
+
+  /*════════════════════════════════════════════
+    Hide Category Titles
+  ════════════════════════════════════════════*/
+
+.favourites:not(.overview .favourites) .favourites:nth-child(1) .section-header .actions, .favourites:not(.overview .favourites) .favourites:nth-child(2) .section-header .actions, .favourites:not(.overview .favourites) .favourites:nth-child(3) .section-header .actions, .favourites:not(.overview .favourites) .favourites:nth-child(4) .section-header .actions, .favourites:not(.overview .favourites) .favourites:nth-child(5) .section-header .actions {
+    display: none !important;
+}
+
+.favourites .favourites:nth-child(1) .section-header, .favourites .favourites:nth-child(2) .section-header, .favourites .favourites:nth-child(3) .section-header, .favourites .favourites:nth-child(4) .section-header, .favourites .favourites:nth-child(5) .section-header {
+    position: relative !important;
+    visibility: hidden !important;
+}
+
+  /*════════════════════════════════════════════
+    Anime Showcase Images
+  ════════════════════════════════════════════*/
+
+/*════════ Hidamari Sketch ════════*/
+body:has(a.favourite[href*="anime/11239/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/N5LDIa5.jpeg);
+}
+
+/*════════ Aria ════════*/
+body:has(a.favourite[href*="anime/3297/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/Rc1lhHC.jpeg);
+}
+
+/*════════ Mushishi ════════*/
+body:has(a.favourite[href*="anime/457/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/qQSJ8ZH.jpeg);
+}
+
+/*════════ Liz ════════*/
+body:has(a.favourite[href*="anime/100178/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/R7dQHM6.jpeg);
+}
+
+/*════════ Tamayura ════════*/
+body:has(a.favourite[href*="anime/21554/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/sr3RJ0N.jpeg);
+}
+
+/*════════ Ashita no Joe ════════*/
+body:has(a.favourite[href*="anime/2921/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/xHASVPj.jpeg);
+}
+
+/*════════ Sorayori ════════*/
+body:has(a.favourite[href*="anime/99426/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/mExwESd.jpeg);
+}
+
+/*════════ Non Non Biyori ════════*/
+body:has(a.favourite[href*="anime/17549/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/2hMkF3a.jpeg);
+}
+
+/*════════ Tamako Love Story ════════*/
+body:has(a.favourite[href*="anime/20519/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/HdxRCtD.jpeg);
+}
+
+/*════════ Hyouka ════════*/
+body:has(a.favourite[href*="anime/12189/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/L1ELEOR.jpeg);
+}
+
+/*════════ Sonny Boy ════════*/
+body:has(a.favourite[href*="anime/132126/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/U08i10U.jpeg);
+}
+
+/*════════ Oregairu ════════*/
+body:has(a.favourite[href*="anime/20698/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/lyJHZAO.jpeg);
+}
+
+/*════════ Chihayafuru ════════*/
+body:has(a.favourite[href*="anime/10800/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/G4mdONT.jpeg);
+}
+
+/*════════ Sakura Quest ════════*/
+body:has(a.favourite[href*="anime/97903/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/3mMsdmO.jpeg);
+}
+
+/*════════ Girls' Last Tour ════════*/
+body:has(a.favourite[href*="anime/99420/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/l6Nxgoy.jpeg);
+}
+
+/*════════ Shirobako ════════*/
+body:has(a.favourite[href*="anime/20812/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/mYL9Edc.jpeg);
+}
+
+/*════════ Yuru Camp ════════*/
+body:has(a.favourite[href*="anime/98444/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/a8tYn4k.jpeg);
+}
+
+/*════════ In This Corner Of The World ════════*/
+body:has(a.favourite[href*="anime/15227/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/NGHFjAu.jpeg);
+}
+
+/*════════ Sangatsu no Lion ════════*/
+body:has(a.favourite[href*="anime/21366/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/D0KEVzv.jpeg);
+}
+
+/*════════ Haibane Renmei ════════*/
+body:has(a.favourite[href*="anime/387/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/Qq8N3br.jpeg);
+}
+
+/*════════ Hunter X Hunter ════════*/
+body:has(a.favourite[href*="anime/136/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/OPA8Gyd.jpeg);
+}
+
+/*════════ Texhnolyze ════════*/
+body:has(a.favourite[href*="anime/26/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/XKFfoqN.jpeg);
+}
+
+/*════════ Akage no Anne ════════*/
+body:has(a.favourite[href*="anime/283/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/VCnoZ2U.jpeg);
+}
+
+/*════════ Super Cub ════════*/
+body:has(a.favourite[href*="anime/113418/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/JKvvkjM.jpeg);
+}
+
+/*════════ Nana ════════*/
+body:has(a.favourite[href*="anime/877/"]:hover) .favourites .favourites:nth-child(1)::after {
+    background: url(https://i.imgur.com/qXp9T0g.jpeg);
+}
+
+  /*════════════════════════════════════════════
+    Manga Showcase Images
+  ════════════════════════════════════════════*/
+  
+/*════════ Bloom Into You ════════*/
+body:has(a.favourite[href*="manga/86218/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/KVI19Ek.jpeg);
+}
+
+/*════════ White Album 2 (VN) ════════*/
+body:has(a.favourite[href*="manga/91579/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/2UNVl5v.jpeg);
+}
+
+/*════════ Oregairu ════════*/
+body:has(a.favourite[href*="manga/70171/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/ag6Y2HI.jpeg);
+}
+
+/*════════ Adashima ════════*/
+body:has(a.favourite[href*="manga/169725/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/Y5aREoK.jpeg);
+}
+
+/*════════ Chihayafuru ════════*/
+body:has(a.favourite[href*="manga/43245/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/Jq0TX3H.jpeg);
+}
+
+/*════════ Yokohama Kaidashi Kikou ════════*/
+body:has(a.favourite[href*="manga/30004/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/g9DLSTH.jpeg);
+}
+
+/*════════ Houseki no Kuni ════════*/
+body:has(a.favourite[href*="manga/74489/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/XjlRw7S.jpeg);
+}
+
+/*════════ Perfect World ════════*/
+body:has(a.favourite[href*="manga/93433/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/aitP1vZ.jpeg);
+}
+
+/*════════ Girls' Last Tour ════════*/
+body:has(a.favourite[href*="manga/85412/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/qYw8cWo.jpeg);
+}
+
+/*════════ Solanin ════════*/
+body:has(a.favourite[href*="manga/33731/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/8SmwNwd.jpeg);
+}
+
+/*════════ The Summit of the Gods ════════*/
+body:has(a.favourite[href*="manga/34625/"]:hover) .favourites .favourites:nth-child(2)::after {
+    background: url(https://i.imgur.com/E71mKGd.jpeg);
+}
