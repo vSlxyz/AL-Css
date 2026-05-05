@@ -244,12 +244,12 @@ body:has(a.favourite[href*="anime/19603/"]:hover) .favourites .favourites:nth-ch
 
 /*════════ A Silent Voice ════════*/
 body:has(a.favourite[href*="anime/20954/"]:hover) .favourites .favourites:nth-child(1)::after {
-    background: url(https://i.imgur.com/qQSJ8ZH.jpeg);
+    background: url(https://wallpapers.com/images/hd/poster-a-silent-voice-mit-charakteren-a6q9kq6tb8oalsbn.jpg);
 }
 
 /*════════ Violet Evergarden ════════*/
 body:has(a.favourite[href*="anime/21827/"]:hover) .favourites .favourites:nth-child(1)::after {
-    background: url(https://wallpapers.com/images/hd/poster-a-silent-voice-mit-charakteren-a6q9kq6tb8oalsbn.jpg);
+    background: url(https://c4.wallpaperflare.com/wallpaper/923/685/115/violet-evergarden-anime-girls-violet-evergarden-anime-water-wallpaper-preview.jpg);
 }
 
 /*════════ Dororo ════════*/
